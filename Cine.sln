@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cine.core", "Cine.core\Cine.core.csproj", "{FBDF65C4-2845-4D9B-B25E-8DFD4929C3D6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cine.Dapper", "Cine.Dapper\Cine.Dapper.csproj", "{8EE3718D-B41B-4368-9409-69E1B06F8E59}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cine.TestAdo", "Cine.TestAdo\Cine.TestAdo.csproj", "{6A963E30-3764-4FDB-B679-79CC9F07152B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{FBDF65C4-2845-4D9B-B25E-8DFD4929C3D6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FBDF65C4-2845-4D9B-B25E-8DFD4929C3D6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FBDF65C4-2845-4D9B-B25E-8DFD4929C3D6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FBDF65C4-2845-4D9B-B25E-8DFD4929C3D6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8EE3718D-B41B-4368-9409-69E1B06F8E59}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8EE3718D-B41B-4368-9409-69E1B06F8E59}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8EE3718D-B41B-4368-9409-69E1B06F8E59}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8EE3718D-B41B-4368-9409-69E1B06F8E59}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6A963E30-3764-4FDB-B679-79CC9F07152B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6A963E30-3764-4FDB-B679-79CC9F07152B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6A963E30-3764-4FDB-B679-79CC9F07152B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6A963E30-3764-4FDB-B679-79CC9F07152B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
