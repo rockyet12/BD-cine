@@ -1,3 +1,5 @@
+using Cine.Core;
+
 namespace Biblioteca;
 
 public class Cliente
