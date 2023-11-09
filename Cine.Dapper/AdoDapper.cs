@@ -4,6 +4,7 @@ using MySqlConnector;
 using Cine.core;
 using Biblioteca;
 using Cine.Core;
+using System.Runtime.InteropServices;
 
 namespace Cine.Dapper;
 
@@ -24,6 +25,8 @@ public class AdoDapper : IAdo
     AND contra = SHA2(@unacontra, 256)
     LIMIT 1";
 
+
+                // SP para Cliente 
     public void AltaCliente(Cliente cliente)
     {
         var parametros = new DynamicParameters();
@@ -38,10 +41,30 @@ public class AdoDapper : IAdo
 
         cliente.IdCliente = (ushort)parametros.Get<short>("@unIdCliente");
     }
+
+
+                    // SP para Entrada
     public void AltaEntrada(Entrada entrada)
+    {
+        var parametros = new DynamicParameters ();
+
+        parametros.Add("@unIdEntrada",direction: ParameterDirection.Output);
+        parametros.Add("@unidproyeccion",entrada.IdProyeccion);
+        parametros.Add("@unidcliente",entrada.IdCliente);
+        parametros.Add("@unprecio",entrada.Precio);
+
+        _conexion.Execute("AltaEntrada",parametros);
+
+        entrada.IdEntrada=parametros.Get<short>("unidentrada");
+    }
+            // altaproyeccion, falta completar por temas de compresion 
+    public void AltaProyeccion(Proyeccion proyeccion)
     {
         var parametros = new DynamicParameters();
 
-        parametros.Add("@")
+    parametros.Add("@unidProyeccion",direction: ParameterDirection.Output);
+    parametros.Add("@unidsala",proyeccion.IdSala);
     }
+
+    
 }
