@@ -64,7 +64,49 @@ public class AdoDapper : IAdo
 
     parametros.Add("@unidProyeccion",direction: ParameterDirection.Output);
     parametros.Add("@unidsala",proyeccion.IdSala);
+    parametros.add("@unidpelicula",proyeccion.Pelicula.IdPelicula)
+    parametros.Add("@unfechahora",proyeccion.fechahora);
+
+    _conexion.Execute("AltaProyeccion",parametros)
+    Proyeccion.IdProyeccion= parametros.Get<int>("unidProyeccion");
+    }
+                    // altasala 
+    public void Altasala(Sala sala)
+    {
+        var parametros= new DynamicParameters();
+
+        parametros.add("@unIdSala",direction: ParameterDirection.Output);
+        parametros.add("@unpiso",sala.piso);
+        parametros.add("@uncapacidad",sala.capacidad);
+
+        _conexion.Execute("AltaSala",parametros)
+        Sala.IdSala=parametros.Get<int>("unIdSala");
     }
 
-    
+                    // Altapelicula 
+    public void AltaPelicula(Pelicula pelicula)
+    {
+        var parametros= new DynamicParameters();
+
+        parametros.add("@unIdPelicula", direction: ParameterDirection.Output);
+        parametros.add("@unIdGenero",pelicula.Genero.IdGenero);
+        parametros.add("@unnombre",pelicula.nombre);
+        parametros.add("@unlanzamiento",pelicula.lanzamiento);
+
+        _conexion.Execute("AltaPelicula",parametros)
+        Pelicula.IdPelicula=parametros.Get<ushort>("unIdpelicula");
+    }
+
+                    // Altagenero
+    public void AltaGenero(Genero genero)
+    {
+        var parametros= new DynamicParameters();
+
+        parametros.add("@unIdGenero",direction: ParameterDirection.Output);
+        parametros.add("@unombre",genero.nombre);
+
+        _conexion.Execute("AltaGenero",parametros)
+        Genero.IdGenero=parametros.Get<short>("unIdGenero");
+    }
+
 }

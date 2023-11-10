@@ -2,9 +2,9 @@
 
 public class Genero
 {
-    public  Guid IdGenero { get; set; }
+    public  short IdGenero { get; set; }
     public string Nombre { get; set; }
-    public Genero(Guid IdGenero, string nombre)
+    public Genero(short IdGenero, string nombre)
     {
         this.IdGenero = IdGenero;
         this.Nombre=nombre;
