@@ -94,7 +94,7 @@ public class AdoDapper : IAdo
         parametros.add("@unlanzamiento",pelicula.lanzamiento);
 
         _conexion.Execute("AltaPelicula",parametros)
-        Pelicula.IdPelicula=parametros.Get<ushort>("unIdpelicula");
+        Pelicula.IdPelicula = parametros.Get<ushort>("unIdpelicula");
     }
 
                     // Altagenero
