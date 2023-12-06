@@ -1,12 +1,12 @@
-﻿using System.Diagnostics;
+﻿namespace Cine.Core;
 
 public class Genero
 {
-    public  short IdGenero { get; set; }
-    public string Nombre { get; set; }
-    public Genero(short IdGenero, string nombre)
+    public byte idgenero { get; set; }
+    public string  nombre{ get; set; }
+    public Genero(byte  idgenero, string nombre)
     {
-        this.IdGenero = IdGenero;
-        this.Nombre=nombre;
+        this.idgenero=idgenero;
+        this.nombre=nombre;
     }
 }

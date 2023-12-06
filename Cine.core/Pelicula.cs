@@ -1,16 +1,16 @@
-namespace Biblioteca;
+namespace Cine.Core;
 
 public class Pelicula
 {
-    public ushort IdPelicula { get; set; }
-    public List<Genero>IdGenero = new List<Genero>();
-    public string Nombre { get; set; }
-    public DateOnly  Lanzamiento { get; set; }
-    public Pelicula(ushort idPelicula, string nombre, DateOnly lanzamiento)
+    public ushort idpelicula { get; set; }
+    public byte  idgenero { get; set; }
+    public string nombre { get; set; }
+    public DateTime lanzamiento { get; set; }
+    public Pelicula(ushort idpelicula,byte idgenero, string nombre , DateTime lanzamiento)
     {
-        IdPelicula = idPelicula;
-        IdGenero= new List<Genero>();
-        Nombre = nombre;
-        Lanzamiento = lanzamiento;
+        this.idpelicula=idpelicula;
+        this.idgenero=idgenero;
+        this.nombre= nombre;
+        this.lanzamiento=lanzamiento;
     }
 }

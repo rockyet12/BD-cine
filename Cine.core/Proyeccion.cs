@@ -1,16 +1,17 @@
-namespace Biblioteca;
+namespace Cine.Core;
 
 public class Proyeccion
 {
-    public int IdProyeccion { get; set; } 
-    public List<Pelicula>IdPelicula = new();
-    public List<Sala> IdSala = new();
-    public DateTime Fechahora { get; set; }
-    public Proyeccion(int idProyeccion,DateTime fechahora)
+    public int idproyeccion { get; set; }
+    public int idsala { get; set; }
+    public ushort idpelicula { get; set; }
+    public DateTime fechahora { get; set; }
+
+    public Proyeccion(int idproyeccion,int idsala, ushort idpelicula,DateTime fechahora )
     {
-        IdProyeccion = idProyeccion;
-        IdPelicula = new List<Pelicula>();
-        IdSala = new List<Sala>();
-        Fechahora=fechahora;
+        this.idproyeccion=idproyeccion;
+        this.idsala=idsala;
+        this.idpelicula=idpelicula;
+        this.fechahora=fechahora;
     }
 }

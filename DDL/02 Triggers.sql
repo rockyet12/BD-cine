@@ -34,17 +34,14 @@ end $
 
 #Realizar un trigger para que cada vez que se da de alta una película nueva, se crea una proyección por cada sala
 # y para la fecha y hora de creación.
-
 delimiter $
 drop trigger if exists Altas$
-create  trigger Alta after insert on Pelicula
+create  trigger Altas after insert on Pelicula
 for each row
 begin
 
 insert into Proyeccion(idproyeccion,idsala,idpelicula ,fechahora)
-select *, new.idpelicula, now()
-from Sala
-natural join Sala
-where idpelicula = new.idpelicula;
+select idproyeccion , idsala ,new.idpelicula, now()
+from Sala;
 
 end $ 

@@ -1,10 +1,7 @@
-namespace Cine.core;
-
+namespace Cine.Core;
 public interface IAdo
 {
-    void AltaGenero(Genero genero);
-    List<Genero>ObtenerGenero();
-    void AltaPelicula(Pelicula pelicula); 
-    List<Pelicula>ObtenerPelicula();
-    Pelicula? ObtenerPelicula(ushort IdPelicula);
+    void AltaSala (Sala sala);
+    List<Sala>ObtenerSalas();
+    Sala? ObtenerSalas(byte Id);
 }
